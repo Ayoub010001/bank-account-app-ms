@@ -1,0 +1,14 @@
+#fixing cors problem : allow origins to access your backend.
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfiguration:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE

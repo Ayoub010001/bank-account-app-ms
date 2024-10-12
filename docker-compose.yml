@@ -71,3 +71,10 @@ services:
           condition: service_healthy
         ebank-ms-config-service:
           condition: service_healthy
+    ebank-front-end:
+      build: ./font-end
+      container_name: ebank-front-end
+      ports:
+        - '80:80'
+      expose:
+        - '80'
